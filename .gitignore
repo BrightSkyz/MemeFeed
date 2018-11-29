@@ -39,3 +39,5 @@ out/
 # MemeFeed
 memefeed-bot.properties
 memes/
+torrents/
+*torrent

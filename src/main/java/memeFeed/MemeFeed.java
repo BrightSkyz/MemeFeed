@@ -1,5 +1,6 @@
 package memeFeed;
 
+import memeFeed.actions.LookupAndPostDankMemes;
 import memeFeed.actions.LookupAndPostMemes;
 import memeFeed.actions.PostMemesWithDelay;
 import memeFeed.commands.HelpCommand;
@@ -109,6 +110,7 @@ public class MemeFeed {
 
         // Start the loop for meme getting and posting
         LookupAndPostMemes.startLoop();
+        LookupAndPostDankMemes.startLoop();
         PostMemesWithDelay.startLoop();
     }
 }
