@@ -19,7 +19,9 @@ public class HelpCommand extends Command {
                 "**Commands**:\n" +
                 "help menu - Displays this help menu\n" +
                 "help sentence command/cmd - Sentence Command Help\n" +
-                "get/find meme [id] - Get the meme with the ID [id]"
+                "get/find meme [id] - Get the meme with the ID [id]\n\n" +
+                "**Want to get a constant feed of memes?**:\n" +
+                "Create a text channel called #memefeed which the bot can post to."
         );
     }
 }

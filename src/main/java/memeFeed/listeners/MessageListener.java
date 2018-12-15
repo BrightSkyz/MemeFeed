@@ -27,8 +27,8 @@ public class MessageListener extends ListenerAdapter {
                 }
             } else */if (message.isMentioned(event.getGuild().getSelfMember(), Message.MentionType.USER)) {
                 for (Command command : MemeFeed._commands.values()) {
-                    if (command._sentenceCommand.isCommandFound(message.getContentStripped())) {
-                        command.runCommand(message.getContentStripped(), event);
+                    if (command._sentenceCommand.isCommandFound(message.getContentDisplay())) {
+                        command.runCommand(message.getContentDisplay(), event);
                         return;
                     }
                 }

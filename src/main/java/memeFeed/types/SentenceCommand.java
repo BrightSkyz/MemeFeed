@@ -28,16 +28,19 @@ public class SentenceCommand {
         // First change everything to the stem of the word
         char[] messageChars = string.toCharArray();
         string = "";
-        PorterStemmer s = new PorterStemmer();
+        PorterStemmer stem = new PorterStemmer();
         for (char ch : messageChars) {
             if (Character.isLetter((char) ch)) {
-                s.add(Character.toLowerCase((char) ch));
+                stem.add(Character.toLowerCase((char) ch));
             } else {
-                s.stem();
-                string += s.toString() + " ";
-                s.reset();
+                stem.stem();
+                string += stem.toString() + " ";
+                stem.reset();
             }
         }
+        // Then stem last word
+        stem.stem();
+        string += stem.toString() + " ";
         // Then check for command
         Boolean overallFound = false;
         for (String[] wordSet : _words) {
